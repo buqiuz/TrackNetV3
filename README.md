@@ -226,3 +226,8 @@ scenarios to strengthen the network’s robustness. Given that a shuttlecock can
 * TrackNetV2: https://nol.cs.nctu.edu.tw:234/open-source/TrackNetv2
 * Shuttlecock Trajectory Dataset: https://hackmd.io/@TUIK/rJkRW54cU
 * Labeling Tool: https://github.com/Chang-Chia-Chi/TrackNet-Badminton-Tracking-tensorflow2?tab=readme-ov-file#label
+
+## License
+This project, including both the codebase and the pretrained model checkpoints (e.g., weights hosted on Google Drive), is released under the [MIT License](./LICENSE). 
+
+You are free to use, modify, and distribute it for both non-commercial and commercial purposes.
