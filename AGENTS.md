@@ -2,6 +2,10 @@
 
 Research code for TrackNetV3 (badminton shuttlecock tracking). Two modules trained separately: **TrackNet** (heatmap tracking) and **InpaintNet** (trajectory rectification). No test suite, lint, or CI — verification means running the scripts below.
 
+## Standalone inference library
+
+`tracknetv3_lib/` is a self-contained, dependency-light port of `predict.py` for secondary development (see its README). When changing inference-affecting logic in `dataset.py`, `utils/general.py`, or `test.py`, re-verify the lib with `tracknetv3_lib/verify.py` against a fresh `predict.py` baseline — its output must stay frame-identical.
+
 ## Setup
 
 - `pip install -r requirements.txt` — pinned old deps (torch 1.10.0, Python 3.8 era); do not assume modern APIs.

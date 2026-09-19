@@ -1,0 +1,16 @@
+# tracknetv3_lib 推理库依赖
+# 以下为实际通过一致性验证的版本组合（GPU 上与原版 predict.py 输出逐帧一致），
+# 未验证其他组合；如需更换版本，请用 verify.py 重新对照 baseline。
+# 运行环境：Python >= 3.11（实测 3.11；pandas 3.x / numpy 2.x 不支持更旧版本）
+
+torch==2.5.1
+# 安装 CUDA 版（官方权重在 GPU 上验证）：
+#   pip install torch==2.5.1 --index-url https://download.pytorch.org/whl/cu121
+# PyPI 默认的 torch==2.5.1 自带 CUDA 12.4，亦可使用；CPU-only 环境同样可运行（有 ±1px 浮点差异）。
+# 最低 torch>=2.0（代码兼容 torch>=2.6 的 weights_only 默认值变更）。
+
+numpy==2.4.6
+opencv-python==5.0.0.93
+pandas==3.0.6
+Pillow==12.3.0
+tqdm==4.70.1

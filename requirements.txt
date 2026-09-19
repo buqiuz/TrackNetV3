@@ -1,3 +1,5 @@
+# 训练/评估/原版推理脚本的依赖（原始研究环境：Python 3.8 + torch 1.10.0，勿在现代项目中直接使用；
+# 二次开发推理集成请使用 tracknetv3_lib/requirements.txt）
 dash==2.5.1
 numpy==1.22.4
 opencv_python==4.4.0.46
@@ -6,3 +8,7 @@ Pillow==10.0.0
 plotly==5.8.2
 torch==1.10.0
 parse
+# 以下三个包被脚本 import 但原先未列入，补齐（与 Python 3.8 兼容的版本）
+tqdm==4.65.0            # train.py / test.py / predict.py / dataset.py
+pycocotools==2.0.7      # test.py（COCO 评估）
+matplotlib==3.7.5       # utils/visualize.py（训练可视化、preprocess 中位数图）
